@@ -1,4 +1,4 @@
-package com.goodworkalan.stringbeans.validation;
+package com.goodworkalan.okay;
 
 
 /**

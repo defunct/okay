@@ -1,4 +1,4 @@
-package com.goodworkalan.stringbeans.validation;
+package com.goodworkalan.okay;
 
 import java.util.Collection;
 import java.util.Map;

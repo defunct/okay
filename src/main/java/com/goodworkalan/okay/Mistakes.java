@@ -1,4 +1,4 @@
-package com.goodworkalan.stringbeans.validation;
+package com.goodworkalan.okay;
 
 import java.util.ArrayList;
 import java.util.HashMap;

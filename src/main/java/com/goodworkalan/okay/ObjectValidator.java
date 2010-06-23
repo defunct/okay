@@ -1,4 +1,4 @@
-package com.goodworkalan.stringbeans.validation;
+package com.goodworkalan.okay;
 
 /**
  * Validates an object recording errors in a collection of mistakes. This
