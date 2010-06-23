@@ -1,14 +1,13 @@
-package com.goodworkalan.stringbeans.validation.annotations;
+package com.goodworkalan.okay.annotations;
 
 import java.lang.annotation.Annotation;
 
+import com.goodworkalan.okay.Mistakes;
+import com.goodworkalan.okay.ObjectValidator;
+import com.goodworkalan.okay.ValidationException;
 import com.goodworkalan.reflective.Reflective;
 import com.goodworkalan.reflective.getter.Getter;
 import com.goodworkalan.reflective.getter.Getters;
-import com.goodworkalan.stringbeans.validation.Mistakes;
-import com.goodworkalan.stringbeans.validation.ObjectValidator;
-import com.goodworkalan.stringbeans.validation.ReflectiveValidator;
-import com.goodworkalan.stringbeans.validation.ValidationException;
 
 /**
  * An implementation of validator that validates any Java bean based on 
@@ -16,7 +15,7 @@ import com.goodworkalan.stringbeans.validation.ValidationException;
  *
  * @author Alan Gutierrez
  */
-public class AnnotationValidator extends ReflectiveValidator implements ObjectValidator<Object> {
+public class AnnotationValidator implements ObjectValidator<Object> {
     /**
      * Validate the given bean based on annotations applied to the bean
      * properties or fields, reporting errors in the given map of mistakes.

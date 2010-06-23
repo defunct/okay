@@ -1,7 +1,7 @@
 package com.goodworkalan.okay.annotations;
 
-import com.goodworkalan.stringbeans.validation.annotations.ValidatePresenceOf;
-import com.goodworkalan.stringbeans.validation.annotations.ValidateRange;
+import com.goodworkalan.okay.annotations.ValidatePresenceOf;
+import com.goodworkalan.okay.annotations.ValidateRange;
 
 /**
  * An example person bean.

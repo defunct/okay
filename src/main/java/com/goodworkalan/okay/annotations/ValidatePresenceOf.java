@@ -1,4 +1,4 @@
-package com.goodworkalan.stringbeans.validation.annotations;
+package com.goodworkalan.okay.annotations;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 
-// TODO Document.
+/** Validate that a field is not null. */
 @Documented
 @Target({ ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

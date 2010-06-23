@@ -1,4 +1,4 @@
-package com.goodworkalan.stringbeans.validation.annotations;
+package com.goodworkalan.okay.annotations;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

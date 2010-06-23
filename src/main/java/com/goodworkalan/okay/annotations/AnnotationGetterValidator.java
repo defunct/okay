@@ -1,7 +1,7 @@
-package com.goodworkalan.stringbeans.validation.annotations;
+package com.goodworkalan.okay.annotations;
 
+import com.goodworkalan.okay.Mistakes;
 import com.goodworkalan.reflective.getter.Getter;
-import com.goodworkalan.stringbeans.validation.Mistakes;
 
 /**
  * Implementation of a validation strategy declared by a validation annotation.
