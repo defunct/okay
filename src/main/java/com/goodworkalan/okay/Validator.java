@@ -3,10 +3,10 @@ package com.goodworkalan.okay;
 import java.util.Collection;
 import java.util.Map;
 
+import com.goodworkalan.reflective.getter.Getter;
+import com.goodworkalan.reflective.getter.Getters;
 import com.goodworkalan.stringbeans.AbstractEmitter;
 import com.goodworkalan.stringbeans.Converter;
-import com.goodworkalan.stringbeans.MetaObject;
-import com.goodworkalan.stringbeans.ObjectBucket;
 import com.goodworkalan.utility.ClassAssociation;
 
 /**
@@ -110,10 +110,10 @@ public class Validator {
          *            The bean.
          */
         @Override
-        protected void emitBean(Mistakes output, MetaObject metaObject, Object bean) {
+        protected void emitBean(Mistakes output, Object bean) {
             association.get(bean.getClass()).validate(bean, output);
-            for (ObjectBucket bucket : metaObject.buckets(bean)) {
-                emitObject(output, bucket.getValue());
+            for (Getter getter : Getters.getGetters(bean.getClass()).values()) {
+                emitObject(output, get(getter, bean));
             }
         }
 
