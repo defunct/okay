@@ -104,8 +104,6 @@ public class Validator {
          * 
          * @param output
          *            The collection of mistakes.
-         * @param metaObject
-         *            The bean getters.
          * @param bean
          *            The bean.
          */
@@ -123,8 +121,8 @@ public class Validator {
          * 
          * @param output
          *            The collection of mistakes.
-         * @param map
-         *            The map.
+         * @param collection
+         *            The collection.
          */
         @Override
         protected void emitCollection(Mistakes output, Collection<?> collection) {
