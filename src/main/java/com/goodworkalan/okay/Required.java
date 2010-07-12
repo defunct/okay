@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.goodworkalan.reflective.ReflectiveException;
 import com.goodworkalan.reflective.getter.Getter;
 import com.goodworkalan.reflective.getter.Getters;
 
@@ -44,8 +43,8 @@ public class Required<T> implements ObjectValidator<T> {
                     if (getter.get(object) == null) {
                         mistakes.mistake(object, getter.getName(), "required");
                     }
-                } catch (ReflectiveException e) {
-                    throw new ValidationException(Required.class, "getter", getter.getName(), getter.getType(), object.getClass());
+                } catch (Exception e) {
+                    throw new ValidationException(e, Required.class, "getter", getter.getName(), getter.getType(), object.getClass());
                 }
             }
         }

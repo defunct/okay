@@ -19,10 +19,11 @@ public class OkayProject implements ProjectModule {
     public void build(Builder builder) {
         builder
             .cookbook(JavaProject.class)
-                .produces("com.github.bigeasy.okay/okay/0.1")
+                .produces("com.github.bigeasy.okay/okay/0.1.0.1")
                 .depends()
                     .production("com.github.bigeasy.string-beans/string-beans/0.+1")
                     .production("com.github.bigeasy.reflective/reflective-getter/0.+1")
+                    .production("com.github.bigeasy.verbiage/verbiage/0.+1")
                     .development("org.testng/testng-jdk15/5.10")
                     .development("org.mockito/mockito-core/1.6")
                     .end()
