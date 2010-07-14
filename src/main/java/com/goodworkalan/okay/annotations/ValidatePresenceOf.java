@@ -7,7 +7,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 
-/** Validate that a field is not null. */
+/**
+ *  Validate that a field is not null.
+ *  
+ *  @author Alan Gutierrez
+ */
 @Documented
 @Target({ ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
