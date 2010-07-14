@@ -5,7 +5,6 @@ import java.lang.annotation.Annotation;
 import com.goodworkalan.okay.Mistakes;
 import com.goodworkalan.okay.ObjectValidator;
 import com.goodworkalan.okay.ValidationException;
-import com.goodworkalan.reflective.Reflective;
 import com.goodworkalan.reflective.getter.Getter;
 import com.goodworkalan.reflective.getter.Getters;
 
@@ -55,8 +54,8 @@ public class AnnotationValidator implements ObjectValidator<Object> {
     static AnnotationGetterValidator getValidator(Validation validation) {
         try {
             return validation.validator().newInstance();
-        } catch (Throwable e) {
-            throw new ValidationException(AnnotationValidator.class, "validator", Reflective.encode(e));
+        } catch (Exception e) {
+            throw new ValidationException(e, AnnotationValidator.class, "validator", validation.validator());
         }
     }
 
@@ -73,8 +72,8 @@ public class AnnotationValidator implements ObjectValidator<Object> {
     static Object get(Getter getter, Object object) {
         try {
             return getter.get(object);
-        } catch (Throwable e) {
-            throw new ValidationException(AnnotationValidator.class, "get", Reflective.encode(e));
+        } catch (Exception e) {
+            throw new ValidationException(e, AnnotationValidator.class, "get", getter.getMember().getDeclaringClass(), getter.getName());
         }
     }
 }
