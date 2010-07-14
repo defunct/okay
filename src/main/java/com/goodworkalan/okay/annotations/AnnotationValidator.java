@@ -2,9 +2,9 @@ package com.goodworkalan.okay.annotations;
 
 import java.lang.annotation.Annotation;
 
+import com.goodworkalan.danger.Danger;
 import com.goodworkalan.okay.Mistakes;
 import com.goodworkalan.okay.ObjectValidator;
-import com.goodworkalan.okay.ValidationException;
 import com.goodworkalan.reflective.getter.Getter;
 import com.goodworkalan.reflective.getter.Getters;
 
@@ -55,7 +55,7 @@ public class AnnotationValidator implements ObjectValidator<Object> {
         try {
             return validation.validator().newInstance();
         } catch (Exception e) {
-            throw new ValidationException(e, AnnotationValidator.class, "validator", validation.validator());
+            throw new Danger(e, AnnotationValidator.class, "validator", validation.validator());
         }
     }
 
@@ -73,7 +73,7 @@ public class AnnotationValidator implements ObjectValidator<Object> {
         try {
             return getter.get(object);
         } catch (Exception e) {
-            throw new ValidationException(e, AnnotationValidator.class, "get", getter.getMember().getDeclaringClass(), getter.getName());
+            throw new Danger(e, AnnotationValidator.class, "get", getter.getMember().getDeclaringClass(), getter.getName());
         }
     }
 }
