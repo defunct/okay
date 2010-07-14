@@ -2,10 +2,6 @@ package com.goodworkalan.okay;
 
 import org.testng.annotations.Test;
 
-import com.goodworkalan.okay.Mistakes;
-import com.goodworkalan.okay.ObjectValidator;
-import com.goodworkalan.okay.Validator;
-
 /**
  * Unit tests for the {@link Validator} class.
  *
